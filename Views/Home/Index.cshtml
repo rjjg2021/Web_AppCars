@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Cars Details</h1>
+    <p><strong>Instructions:</strong>Click on the image to change the car's status</p>
+    <div class="card-deck">
+        @foreach (var car in Model)
+        {
+            var rutaFoto = Web_AppCars.Utilerias.ValidateWebFiles.ValidateWebImage(car.Image);
+            var IdCar = "car" + car.Id;
+            var IdP = "p" + car.Id;
+
+
+            <div class="card m-3" style="min-width: 18rem; max-width: 30.5%;" id="@car.Id">
+                <div class="card-header">
+                    <p>Make: @car.Make</p>
+                    <p>Model: @car.Model</p>
+                    <p>Estimate date: @car.Estimatedate</p>
+                    <p>Km: @car.Km</p>
+
+                </div>
+                <span id=IdCar></span>
+                <a href=#@IdCar onclick="changeBG(@car.Id);">
+                    <img class="card-img-top imagen" src="@rutaFoto" asp-append-version="true" />
+                </a>
+                <div class="card-footer text-center">
+                    <p>ID: @car.Id</p>
+                    <p>Description: @car.Description</p>
+                    <p id="@IdP" style="font-weight: bold;"></p>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+
+    function changeBG(id){
+        const idElement = id;
+        document.getElementById(idElement).style.backgroundColor = "#AFEEEE";
+        document.getElementById("p"+idElement).innerHTML = "Maintenance";
+    }
+</script>
+

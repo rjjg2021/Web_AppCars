@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "529IV7+3rQ/Ik8ntUnEfo0c/UMuwLkB/+UDxORWWrA29tIaRqpLw/kBrPcClwuvdilFbEXQBQlXK2ocJiDdJiQ==",
+  "success": true,
+  "projectFilePath": "D:\\ExamJob\\Web_AppCars\\Web_AppCars.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sistema72\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\sistema72\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
