@@ -19,9 +19,7 @@ namespace Web_AppCars.Utilerias
                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                .AddJsonFile("appsettings.json").Build();
 
-            var section = config.GetSection("ApiURL");
-
-            string apiURL = section.Value;
+            var apiURL = config.GetSection("ApiURL").Value;
 
 
             cliente = new HttpClient
