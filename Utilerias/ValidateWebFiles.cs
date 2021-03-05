@@ -7,7 +7,7 @@ namespace Web_AppCars.Utilerias
 {
     public class ValidateWebFiles
     {
-        public static string ValidateWebImage(string url)
+        public string ValidateWebImage(string url)
         {
             int flag = 0;
             System.Net.HttpWebRequest request = null;
