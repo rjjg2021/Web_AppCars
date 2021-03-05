@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    Web_AppCars.Utilerias.ValidateWebFiles validateFiles = new Web_AppCars.Utilerias.ValidateWebFiles();
     
 }
 
@@ -9,7 +10,7 @@
     <div class="card-deck">
         @foreach (var car in Model)
         {
-            var rutaFoto = Web_AppCars.Utilerias.ValidateWebFiles.ValidateWebImage(car.Image);
+            var rutaFoto = validateFiles.ValidateWebImage(car.Image);
             var IdCar = "car" + car.Id;
             var IdP = "p" + car.Id;
 
