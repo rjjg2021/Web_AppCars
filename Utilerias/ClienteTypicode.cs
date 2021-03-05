@@ -15,9 +15,18 @@ namespace Web_AppCars.Utilerias
 
         public ClienteTypicode()
         {
+            var config = new ConfigurationBuilder()
+               .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+               .AddJsonFile("appsettings.json").Build();
+
+            var section = config.GetSection("ApiURL");
+
+            string apiURL = section.Value;
+
+
             cliente = new HttpClient
             {
-                BaseAddress = new Uri("https://{Write_API-REST_Address}/")
+                BaseAddress = new Uri(apiURL)
             };
 
             cliente.DefaultRequestHeaders.Accept.Clear();
